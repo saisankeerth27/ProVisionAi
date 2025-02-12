@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProVisionAI - Image Annotation</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="main-container">
+    <!-- Upload Section -->
+    <div class="box">
+      <h1>🔍 ProVisionAI</h1>
+      <p>Upload an image to get AI-powered annotations.</p>
+
+      <form id="uploadForm">
+        <label for="imageInput" class="custom-file-upload">
+          📷 Choose Image
+          <input type="file" id="imageInput" accept="image/*" required>
+        </label>
+        <button type="submit">🔄 Upload & Analyze</button>
+      </form>
+    </div>
+
+    <!-- Result Section (Hidden Initially) -->
+    <div class="result-container" id="result">
+      <div class="image-container">
+        <img id="uploadedImage" src="#" alt="Uploaded Image">
+      </div>
+      <div class="text-container">
+        <h2>✨ Annotation Result:</h2>
+        <p id="annotationText">Processing...</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
